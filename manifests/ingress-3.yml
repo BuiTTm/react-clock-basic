@@ -12,6 +12,9 @@ spec:
           http:
             paths:
             - path: /
+              pathType: Prefix
               backend:
-                serviceName: "clockaks01-c20b"
-                servicePort: 8080
+                service:
+                  name: "clockaks01-c20b"
+                  port: 
+                    number: 8080
