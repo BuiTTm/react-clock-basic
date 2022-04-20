@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: jayaks2
+  name: "clockaks01-c20b"
 spec:
   selector:
       matchLabels:
-        app: jayacr002
-  replicas: 3
+        app: "clockaks01-c20b"
+  replicas: 2
   template:
       metadata:
         labels:
-            app: jayaks2
+            app: "clockaks01-c20b"
       spec:
         containers:
-        - name: jayacr002
-          image: "jayacr002.azurecr.io/jayaks2:v1"
+        - name: "clockaks01-c20b"
+          image: "clockacr01.azurecr.io/clockaks01"
           imagePullPolicy: Always
           readinessProbe:
             httpGet:
